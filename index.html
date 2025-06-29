@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Librarian</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Chatbox Toggle Button -->
+<button class="chatbox-toggle" onclick="toggleChatbox()">
+  <i class="fas fa-comments"></i>
+</button>
+
+<!-- Chatbox -->
+<div class="chatbox" id="chatbox" style="display: none;">
+  <div class="chatbox-header">
+  <i class="fas fa-robot"></i> <span data-lang="chat_title">Chat with us</span>
+  <button onclick="clearChatbox()" class="chatbox-clear" title="Clear Chat"><i class="fas fa-trash-alt"></i></button>
+  <button onclick="toggleChatbox()" class="chatbox-close"><i class="fas fa-times"></i></button>
+</div>
+  <div class="chatbox-body">
+    <p data-lang="chat_greet">Hello! How can I help you today?</p>
+  </div>
+  <div class="chatbox-input">
+    <input type="text" placeholder="Type a message..." />
+    <button><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<script>
+  function toggleChatbox() {
+    const box = document.getElementById('chatbox');
+    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'flex' : 'none';
+  }
+</script>
+
+<header>
+  <h1>
+  <img src="logo.png" alt="Logo" class="site-logo" />
+  <span data-lang="site_title">Data Management Specialist</span>
+</h1>
+  <p data-lang="site_tagline1">Empowering Access to Digital Knowledge & Information</p>
+</header>
+
+<nav>
+  <a href="login.html"><i class="fas fa-sign-in-alt"></i> <span data-lang="login">Login</span></a>
+  <a href="index.html" class="active" ><i class="fas fa-home"></i> <span data-lang="home">Home</span></a>
+  <a href="about.html"><i class="fas fa-user"></i> <span data-lang="about">About Me</span></a>
+  <a href="skills.html"><i class="fas fa-laptop-code"></i> <span data-lang="skills">My Skills</span></a>
+  <a href="library.html"><i class="fas fa-book"></i> <span data-lang="library">Library Explorer</span></a>
+  <a href="projects.html"><i class="fas fa-folder-open"></i> <span data-lang="projects">My Projects</span></a>
+  <a href="services.html"><i class="fas fa-concierge-bell"></i> <span data-lang="services">Services</span></a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> <span data-lang="contact">Contact Me</span></a>
+</nav>
+
+<main>
+  <img src="https://i.pinimg.com/736x/77/01/74/770174382370c014bace3d7f2fb97256.jpg" alt="Gambar" style="width: 500px; height: auto;">
+
+
+  <section class="intro">
+    <h2 data-lang="welcome">Welcome to My Digital Librarian Profile</h2>
+    <p data-lang="intro">I am a future-ready librarian specializing in data management and digital information services. 
+    This website showcases my projects, skills, and passion for improving access to information 
+    through technology and innovation. Whether you're a student, educator, or information professional, 
+    there's something here for everyone.</p>
+    
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 <span data-lang="site_title_footer">Data Management Specialist</span>. <span data-lang="footer_rights">All rights reserved.</span>
+</footer>
+
+<div class="lang-switch">
+  <button onclick="switchLang('en')">EN</button>
+  <button onclick="switchLang('ms')">MS</button>
+</div>
+
+<!-- Pautan ke skrip bahasa -->
+<script src="lang.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

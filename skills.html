@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-lang="skills">My Skills - Professional Librarian</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<!-- Chatbox Toggle Button -->
+<button class="chatbox-toggle" onclick="toggleChatbox()">
+  <i class="fas fa-comments"></i>
+</button>
+
+<!-- Chatbox -->
+<div class="chatbox" id="chatbox" style="display: none;">
+  <div class="chatbox-header">
+  <i class="fas fa-robot"></i> <span data-lang="chat_title">Chat with us</span>
+  <button onclick="clearChatbox()" class="chatbox-clear" title="Clear Chat"><i class="fas fa-trash-alt"></i></button>
+  <button onclick="toggleChatbox()" class="chatbox-close"><i class="fas fa-times"></i></button>
+</div>
+  <div class="chatbox-body">
+    <p data-lang="chat_greet">Hello! How can I help you today?</p>
+  </div>
+  <div class="chatbox-input">
+    <input type="text" placeholder="Type a message..." />
+    <button><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<script>
+  function toggleChatbox() {
+    const box = document.getElementById('chatbox');
+    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'flex' : 'none';
+  }
+</script>
+
+<header>
+  <h1>
+  <img src="logo.png" alt="Logo" class="site-logo" />
+  <span data-lang="site_title">Professional Librarian</span>
+</h1>
+  <p data-lang="site_tagline1">Empowering Access to Digital Knowledge & Information</p>
+  
+</header>
+
+<nav>
+  <a href="login.html"><i class="fas fa-sign-in-alt"></i> <span data-lang="login">Login</span></a>
+  <a href="index.html"><i class="fas fa-home"></i> <span data-lang="home">Home</span></a>
+  <a href="about.html"><i class="fas fa-user"></i> <span data-lang="about">About Me</span></a>
+  <a href="skills.html" class="active"><i class="fas fa-laptop-code"></i> <span data-lang="skills">My Skills</span></a>
+  <a href="library.html"><i class="fas fa-book"></i> <span data-lang="library">Library Explorer</span></a>
+  <a href="projects.html"><i class="fas fa-folder-open"></i> <span data-lang="projects">My Projects</span></a>
+  <a href="services.html"><i class="fas fa-concierge-bell"></i> <span data-lang="services">Services</span></a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> <span data-lang="contact">Contact Me</span></a>
+</nav>
+
+<main class="fade-in">
+  <h2><i class="fas fa-laptop-code"></i> <span data-lang="skills">My Skills</span></h2>
+  <p data-lang="skills_intro">These are the key skills that I bring to the digital information field:</p>
+
+
+  <ul style="text-align: left; max-width: 700px; margin: 2rem auto; font-size: 1.1rem;">
+    <li><i class="fas fa-check-circle"></i> <span data-lang="catalouging">Digital Cataloguing (RDA, MARC21, DDC)</span></li>
+    <p data-lang="skills_1">Skilled in organizing and managing digital collections using international standards to ensure accurate, accessible, and structured information.</p>
+    <li><i class="fas fa-check-circle"></i> <span data-lang="analysis">Data Analysis & Visualization (Excel, Power BI, Python basics)</span></li>
+    <p data-lang="skills_2"> Capable of interpreting and presenting library and user data to support strategic decisions and enhance service delivery.</p>
+    <li><i class="fas fa-check-circle"></i> <span data-lang="tools">Digital Library Development Tools</span></li>
+    <p data-lang="skills_3">Proficient in utilizing digital tools and platforms to design, manage, and optimize digital library systems.</p>
+    
+  </ul>
+</main>
+
+<footer>
+  &copy; 2025 <span data-lang="site_title_footer">Professional Librarian</span>. <span data-lang="footer_rights">All rights reserved.</span>
+</footer>
+
+<div class="lang-switch">
+  <button onclick="switchLang('en')">EN</button>
+  <button onclick="switchLang('ms')">MS</button>
+</div>
+
+<!-- Language Switcher JS -->
+<script src="lang.js"></script>
+<script src="script.js"></script>
+
+</script>
+</body>
+</html>
+
+

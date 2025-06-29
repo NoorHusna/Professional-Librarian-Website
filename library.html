@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-lang="library">Library Explorer - Professional Librarian</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Chatbox Toggle Button -->
+<button class="chatbox-toggle" onclick="toggleChatbox()">
+  <i class="fas fa-comments"></i>
+</button>
+
+<!-- Chatbox -->
+<div class="chatbox" id="chatbox" style="display: none;">
+  <div class="chatbox-header">
+  <i class="fas fa-robot"></i> <span data-lang="chat_title">Chat with us</span>
+  <button onclick="clearChatbox()" class="chatbox-clear" title="Clear Chat"><i class="fas fa-trash-alt"></i></button>
+  <button onclick="toggleChatbox()" class="chatbox-close"><i class="fas fa-times"></i></button>
+</div>
+  <div class="chatbox-body">
+    <p data-lang="chat_greet">Hello! How can I help you today?</p>
+  </div>
+  <div class="chatbox-input">
+    <input type="text" placeholder="Type a message..." />
+    <button><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<script>
+  function toggleChatbox() {
+    const box = document.getElementById('chatbox');
+    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'flex' : 'none';
+  }
+</script>
+
+<header>
+  <h1>
+  <img src="logo.png" alt="Logo" class="site-logo" />
+  <span data-lang="site_title">Professional Librarian</span>
+</h1>
+  <p data-lang="site_tagline1">Empowering Access to Digital Knowledge & Information</p>
+  
+</header>
+
+<nav>
+  <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-user"></i> About Me</a>
+  <a href="skills.html"><i class="fas fa-laptop-code"></i> My Skills</a>
+  <a href="library.html" class="active"><i class="fas fa-book"></i> <span data-lang="library">Library Explorer</span></a>
+  <a href="projects.html"><i class="fas fa-folder-open"></i> My Projects</a>
+  <a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact Me</a>
+</nav>
+
+<main class="fade-in">
+  <h2><i class="fas fa-book"></i> <span data-lang= "librray">Library Explorer</span></h2>
+  <p data-lang="explore_description">Explore categorized digital collections that support learning, research, and discovery.</p>
+
+  <section style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+    <div class="collection-card">
+      <i class="fas fa-code fa-3x"></i>
+      <h3 data-lang= "techcode">Technology & Coding</h3>
+      <p data-lang="resources">Resources for beginners and professionals in programming, data science, and AI.</p>
+    </div>
+
+    <div class="collection-card">
+      <i class="fas fa-flask fa-3x"></i>
+      <h3 data-lang="sciresea">Science & Research</h3>
+      <p data-lang="accopen">Access open-access journals, scientific articles, and research methodology guides.</p>
+    </div>
+
+    <div class="collection-card">
+      <i class="fas fa-paint-brush fa-3x"></i>
+      <h3 data-lang="artshu">Arts & Humanities</h3>
+      <p data-lang= "culture">Explore culture, history, philosophy, and literature in curated digital formats.</p>
+    </div>
+
+    <div class="collection-card">
+      <i class="fas fa-language fa-3x"></i>
+      <h3 data-lang="linguistics">Languages & Linguistics</h3>
+      <p data-lang="dictionaries">Dictionaries, language courses, and scholarly linguistic resources.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+ &copy; 2025 <span data-lang="site_title_footer">Professional Librarian</span>. <span data-lang="footer_rights">All rights reserved.</span>
+</footer>
+
+<!-- Language Switch -->
+<div class="lang-switch">
+  <button onclick="switchLang('en')">EN</button>
+  <button onclick="switchLang('ms')">MS</button>
+</div>
+
+<!-- Chatbox & Language Script -->
+<script>
+  function toggleChatbox() {
+    const box = document.getElementById('chatbox');
+    box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'flex' : 'none';
+  }
+</script>
+<script src="lang.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
